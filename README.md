@@ -5,8 +5,7 @@ docker build https://github.com/hxh007/scrapydweb-docker.git#master scrapydweb:l
 docker run --name scrapydweb -e USERNAME <username> \
     -e PASSWORD <password> \
     -e SCRAPYD_SERVERS <servers> \
-    -v /data/scrapydweb_data:/usr/local/lib/python3.7.11/site-packages/scrapydweb/data \
-    -v /etc/timezone:/etc/timezone \
+    -v /usr/local/code/scrapydweb_data:/usr/local/lib/python3.7/site-packages/scrapydweb/data
     -d scrapydweb:latest
 ```
 
